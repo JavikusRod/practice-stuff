@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "projects": {},
-  "cli": {
-    "defaultCollection": "@nrwl/workspace"
+  "projects": {
+    "remember-react": "apps/remember-react",
+    "remember-react-e2e": "apps/remember-react-e2e"
   }
 }

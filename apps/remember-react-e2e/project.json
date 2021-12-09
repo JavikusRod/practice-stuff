@@ -1,0 +1,28 @@
+{
+  "root": "apps/remember-react-e2e",
+  "sourceRoot": "apps/remember-react-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/remember-react-e2e/cypress.json",
+        "devServerTarget": "remember-react:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "remember-react:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/remember-react-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["remember-react"]
+}
